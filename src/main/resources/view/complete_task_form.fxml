@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="523.0" prefWidth="744.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CompleteTaskForm">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#57595b" height="410.0" layoutX="12.0" layoutY="88.0" stroke="BLACK" strokeType="INSIDE" width="719.0" />
+        <Text layoutX="274.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="My Day" wrappingWidth="173.7952880859375">
+            <font>
+                <Font name="Bodoni MT Bold" size="41.0" />
+            </font>
+        </Text>
+        <ImageView fitHeight="48.0" fitWidth="53.0" layoutX="407.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@img/icons8-day-50.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="178.0" fitWidth="251.0" layoutX="23.0" layoutY="309.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@img/mahiii.jpg" />
+            </image>
+        </ImageView>
+        <Text layoutX="31.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Completed  Form" wrappingWidth="100.0">
+            <font>
+                <Font name="Harlow Solid Italic" size="14.0" />
+            </font>
+        </Text>
+        <TableView fx:id="tableView" layoutX="23.0" layoutY="115.0" prefHeight="178.0" prefWidth="692.0">
+            <columns>
+                <TableColumn fx:id="txtId" prefWidth="47.20001411437988" text="Id" />
+                <TableColumn fx:id="txtTitle" prefWidth="144.800048828125" text="Title" />
+                <TableColumn fx:id="txtDescription" prefWidth="180.79998779296875" text="Description" />
+                <TableColumn fx:id="txtDueDate" prefWidth="108.79998779296875" text="Due_Date" />
+                <TableColumn fx:id="txtCreatedDate" prefWidth="111.20001220703125" text="Created Date" />
+                <TableColumn fx:id="txtCompletedAt" prefWidth="100.79998779296875" text="Completed_At" />
+            </columns>
+        </TableView>
+      <JFXButton alignment="BASELINE_LEFT" layoutX="578.0" layoutY="306.0" onAction="#btnReloadOnAction" prefHeight="42.0" prefWidth="128.0" style="-fx-background-color: #3b1246;" text="Reload" textFill="WHITE">
+         <font>
+            <Font name="Bodoni MT Bold" size="21.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="42.0" fitWidth="48.0" layoutX="663.0" layoutY="306.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/img.icons8.png" />
+         </image>
+      </ImageView>
+      <JFXButton alignment="BASELINE_LEFT" layoutX="530.0" layoutY="432.0" onAction="#btnBackToHomeOnAction" prefHeight="46.0" prefWidth="174.0" style="-fx-background-color: #0a4848;" text="Back To Home" textFill="WHITE">
+         <font>
+            <Font name="Bodoni MT" size="17.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="48.0" fitWidth="55.0" layoutX="658.0" layoutY="431.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/icons8-home-50.png" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>
