@@ -90,7 +90,6 @@ public class ActiveTaskForm {
 
     @FXML
     public void initialize() {
-        // Set up the columns in the table
         txtId.setCellValueFactory(new PropertyValueFactory<>("id"));
         txtTitle.setCellValueFactory(new PropertyValueFactory<>("title"));
         txtDescription.setCellValueFactory(new PropertyValueFactory<>("description"));
