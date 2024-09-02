@@ -122,13 +122,10 @@ public class ProfileFormController {
         MahiRajapakshe task = new MahiRajapakshe();
         task.setTitle(title);
         task.setDescription(description);
-        task.setDueDate(LocalDate.now());  // Example due date
+        task.setDueDate(LocalDate.now()); 
         task.setCompleted(true);
-
-        // Print to console
         System.out.println(task);
 
-        // Insert into database
         try (Connection connection = DBConnection.getInstance().getConnection()) {
             String sql = "INSERT INTO completed_tasks (title, description, due_date, completed_at) VALUES (?, ?, ?, NOW())";
             PreparedStatement pstmt = connection.prepareStatement(sql);
@@ -146,7 +143,6 @@ public class ProfileFormController {
 
     @FXML
     void btnReloadTasks(ActionEvent event)  {
-        // Step 2: Reload the active tasks from the database
         loadActiveTasks();
 
 
@@ -158,7 +154,6 @@ public class ProfileFormController {
             PreparedStatement statement = connection.prepareStatement(query);
             ResultSet resultSet = statement.executeQuery();
 
-            // Populate the fields with data from the database
             if (resultSet.next()) populateTaskFields(resultSet, txtTitle1, txtDescription1, chechBox1);
             if (resultSet.next()) populateTaskFields(resultSet, txtTitle2, txtDescription2, chechBox2);
             if (resultSet.next()) populateTaskFields(resultSet, txtTitle3, txtDescription3, chechBox3);
@@ -198,20 +193,16 @@ public class ProfileFormController {
                 if (rs.next()) {
                     int taskId = rs.getInt("id");
 
-                    // Insert task into completed_tasks
                     String insertQuery = "INSERT INTO completed_tasks (title, description, due_date, created_at) " +
                             "SELECT title, description, due_date, created_at FROM active_tasks WHERE id = ?";
                     PreparedStatement insertStatement = connection.prepareStatement(insertQuery);
                     insertStatement.setInt(1, taskId);
                     insertStatement.executeUpdate();
 
-                    // Remove task from active_tasks
                     String deleteQuery = "DELETE FROM active_tasks WHERE id = ?";
                     PreparedStatement deleteStatement = connection.prepareStatement(deleteQuery);
                     deleteStatement.setInt(1, taskId);
                     deleteStatement.executeUpdate();
-
-                    // Clear the UI elements
                     titleField.clear();
                     descriptionField.clear();
                     checkBox.setSelected(false);
