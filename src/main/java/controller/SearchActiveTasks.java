@@ -74,7 +74,7 @@ public class SearchActiveTasks {
                 searchResults.add(task);
             }
 
-            // Bind data to TableView
+           
             txtId.setCellValueFactory(new PropertyValueFactory<>("id"));
             txtTitle.setCellValueFactory(new PropertyValueFactory<>("title"));
             txtDescription.setCellValueFactory(new PropertyValueFactory<>("description"));
