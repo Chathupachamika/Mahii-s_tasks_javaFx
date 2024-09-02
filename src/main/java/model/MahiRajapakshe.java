@@ -15,11 +15,9 @@ public class MahiRajapakshe {
     private LocalDateTime createdAt;
     private LocalDateTime completedAt;
 
-    // Default constructor
     public MahiRajapakshe() {
     }
 
-    // Full constructor
     public MahiRajapakshe(Integer id, String title, String description, LocalDate dueDate, boolean isCompleted, LocalDateTime createdAt, LocalDateTime completedAt) {
         this.id = id;
         this.title = title;
@@ -40,7 +38,6 @@ public class MahiRajapakshe {
         this.createdAt = createdAt;
     }
 
-    // Getters and Setters
     public Integer getId() {
         return id;
     }
