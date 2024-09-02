@@ -10,28 +10,28 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="632.0" prefWidth="454.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProfileFormController">
+<AnchorPane prefHeight="719.0" prefWidth="712.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProfileFormController">
 
     <children>
-        <Rectangle accessibleRoleDescription="#c2e76b" arcHeight="5.0" arcWidth="5.0" fill="#072c4e" height="800.0" layoutX="-1.0" stroke="BLACK" strokeType="INSIDE" width="461.0" />
-        <Text fill="#fffefe" layoutX="33.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To Do  :" wrappingWidth="107.73672485351562">
+        <Rectangle accessibleRoleDescription="#c2e76b" arcHeight="5.0" arcWidth="5.0" fill="#072c4e" height="682.0" layoutX="34.0" layoutY="24.0" stroke="BLACK" strokeType="INSIDE" width="640.0" />
+        <Text fill="#fffefe" layoutX="39.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To Do  :" wrappingWidth="107.73672485351562">
             <font>
                 <Font name="Showcard Gothic" size="24.0" />
             </font>
         </Text>
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#51799e" height="87.0" layoutX="5.0" layoutY="29.0" stroke="BLACK" strokeDashOffset="100.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeMiterLimit="100.0" strokeWidth="3.0" width="414.0" />
-        <Text layoutX="115.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mahinda Rajapakshe" wrappingWidth="338.41017150878906">
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#51799e" height="93.0" layoutX="48.0" layoutY="30.0" stroke="BLACK" strokeDashOffset="100.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeMiterLimit="100.0" strokeWidth="3.0" width="613.0" />
+        <Text layoutX="188.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mahinda Rajapakshe" wrappingWidth="372.8101043701172">
             <font>
-                <Font size="32.0" />
+                <Font name="Berlin Sans FB" size="34.0" />
             </font>
         </Text>
-        <Text layoutX="139.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mahindarajapakshe69lks@gmail.com" wrappingWidth="258.40000915527344">
+        <Text layoutX="188.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mahindarajapakshe69lks@gmail.com" wrappingWidth="278.40000915527344">
             <font>
-                <Font size="14.0" />
+                <Font name="Arial Unicode MS" size="14.0" />
             </font>
         </Text>
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="77.0" layoutX="49.0" layoutY="186.0" stroke="BLACK" strokeType="INSIDE" width="380.0" />
-        <ImageView fitHeight="101.0" fitWidth="100.0" layoutX="12.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="85.0" fitWidth="130.0" layoutX="49.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@img/mahiii.jpg" />
             </image>
@@ -53,12 +53,12 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="77.0" layoutX="43.0" layoutY="620.0" stroke="BLACK" strokeType="INSIDE" width="380.0" />
       <JFXTextField fx:id="txtTitle6" layoutX="96.0" layoutY="625.0" prefHeight="26.0" prefWidth="270.0" text="Crisis Management" />
       <JFXCheckBox fx:id="chechBox6" layoutX="63.0" layoutY="630.0" prefHeight="18.0" prefWidth="17.0" text=" " />
-      <JFXButton layoutX="230.0" layoutY="740.0" onAction="#btnAddTask" prefHeight="26.0" prefWidth="210.0" style="-fx-background-color: #c6d970;" text="+     Add Task">
+      <JFXButton alignment="BASELINE_RIGHT" layoutX="468.0" layoutY="359.0" onAction="#btnAddTask" prefHeight="52.0" prefWidth="183.0" style="-fx-background-color: #c6d970;" text="+     Add Task">
          <font>
-            <Font name="Bodoni MT Bold" size="27.0" />
+            <Font name="Berlin Sans FB Bold" size="23.0" />
          </font>
       </JFXButton>
-      <ImageView fitHeight="52.0" fitWidth="60.0" layoutX="243.0" layoutY="740.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="52.0" fitWidth="60.0" layoutX="473.0" layoutY="359.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@img/icons8-add-48.png" />
          </image>
@@ -69,10 +69,50 @@
       <JFXTextField fx:id="txtDescription4" layoutX="77.0" layoutY="484.0" prefHeight="26.0" prefWidth="338.0" text="Oversee the allocation and spending of the ministry's budget." />
       <JFXTextField fx:id="txtDescription5" layoutX="77.0" layoutY="571.0" prefHeight="26.0" prefWidth="338.0" text="Collaborate with other government departments to ensure cohesive policy implementation." />
       <JFXTextField fx:id="txtDescription6" layoutX="70.0" layoutY="659.0" prefHeight="26.0" prefWidth="338.0" text=" Respond to emergencies or crises, coordinating with relevant agencies and stakeholders." />
-      <JFXButton layoutX="51.0" layoutY="728.0" onAction="#btnReloadTasks" style="-fx-background-color: #837dc4;" text="Reload">
+      <JFXButton alignment="BASELINE_RIGHT" layoutX="508.0" layoutY="431.0" onAction="#btnReloadTasks" prefHeight="43.0" prefWidth="143.0" style="-fx-background-color: #962f2f;" text="Reload" textFill="WHITE">
          <font>
-            <Font name="Bell MT" size="22.0" />
+            <Font name="Bodoni MT Bold" size="21.0" />
          </font>
       </JFXButton>
+      <ImageView fitHeight="43.0" fitWidth="39.0" layoutX="525.0" layoutY="433.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/img.icons8.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="52.0" fitWidth="60.0" layoutX="597.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/icons8-premium-50.png" />
+         </image>
+      </ImageView>
+      <JFXButton alignment="BOTTOM_LEFT" layoutX="525.0" layoutY="555.0" onAction="#btnSearchOnAction" prefHeight="38.0" prefWidth="126.0" style="-fx-background-color: #562828;" text="Search" textFill="WHITE">
+         <font>
+            <Font name="Bodoni MT Bold" size="23.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="48.0" fitWidth="53.0" layoutX="606.0" layoutY="554.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/icons8-search-50.png" />
+         </image>
+      </ImageView>
+      <JFXButton alignment="BASELINE_LEFT" layoutX="507.0" layoutY="490.0" onAction="#btnCompleteOnAction" prefHeight="46.0" prefWidth="143.0" style="-fx-background-color: #186e71;" text="Completed" textAlignment="JUSTIFY" textFill="WHITE">
+         <font>
+            <Font name="Bodoni MT Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="48.0" fitWidth="53.0" layoutX="606.0" layoutY="489.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/icons8-complete-50.png" />
+         </image>
+      </ImageView>
+      <JFXButton alignment="BASELINE_RIGHT" layoutX="498.0" layoutY="614.0" onAction="#btnActiveOnAction" prefHeight="46.0" prefWidth="153.0" style="-fx-background-color: #70287d;" text="Active Tasks" textAlignment="JUSTIFY" textFill="WHITE">
+         <font>
+            <Font name="Bodoni MT Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="48.0" fitWidth="53.0" layoutX="498.0" layoutY="613.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/icons8-active-50.png" />
+         </image>
+      </ImageView>
     </children>
 </AnchorPane>

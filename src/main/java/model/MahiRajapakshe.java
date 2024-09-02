@@ -15,7 +15,11 @@ public class MahiRajapakshe {
     private LocalDateTime createdAt;
     private LocalDateTime completedAt;
 
+    // Default constructor
+    public MahiRajapakshe() {
+    }
 
+    // Full constructor
     public MahiRajapakshe(Integer id, String title, String description, LocalDate dueDate, boolean isCompleted, LocalDateTime createdAt, LocalDateTime completedAt) {
         this.id = id;
         this.title = title;
@@ -25,54 +29,56 @@ public class MahiRajapakshe {
         this.createdAt = createdAt;
         this.completedAt = completedAt;
     }
-    public MahiRajapakshe() {
-    }
 
-    public void setCompleted(boolean isCompleted) {
-        this.isCompleted = isCompleted;
-    }
-    public boolean isCompleted() {
-        return this.isCompleted;
-    }
 
-    public void setTitle(String title) {
+
+    public MahiRajapakshe(int id, String title, String description, LocalDate dueDate, LocalDateTime createdAt) {
+        this.id = id;
         this.title = title;
-    }
-
-    public void setDescription(String description) {
         this.description = description;
+        this.dueDate = dueDate;
+        this.createdAt = createdAt;
     }
 
-    public void setDueDate(LocalDate dueDate) {
-        this.dueDate = dueDate;
+    // Getters and Setters
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getTitle() {
         return (this.title != null && !this.title.isEmpty()) ? this.title : "Untitled Task";
     }
 
-    public LocalDateTime getCompletedAt() {
-        return completedAt;
-    }
-
-    public void setCompletedAt(LocalDateTime completedAt) {
-        this.completedAt = completedAt;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getDescription() {
         return description;
     }
 
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     public LocalDate getDueDate() {
         return dueDate;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setDueDate(LocalDate dueDate) {
+        this.dueDate = dueDate;
     }
 
-    public Integer getId() {
-        return id;
+    public boolean isCompleted() {
+        return isCompleted;
+    }
+
+    public void setCompleted(boolean isCompleted) {
+        this.isCompleted = isCompleted;
     }
 
     public LocalDateTime getCreatedAt() {
@@ -81,5 +87,13 @@ public class MahiRajapakshe {
 
     public void setCreatedAt(LocalDateTime createdAt) {
         this.createdAt = createdAt;
+    }
+
+    public LocalDateTime getCompletedAt() {
+        return completedAt;
+    }
+
+    public void setCompletedAt(LocalDateTime completedAt) {
+        this.completedAt = completedAt;
     }
 }

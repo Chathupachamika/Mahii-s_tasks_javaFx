@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import javafx.scene.control.DatePicker?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
+<?import com.jfoenix.controls.JFXTextArea?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -12,9 +9,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="523.0" prefWidth="569.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SearchTaskForm">
+<AnchorPane prefHeight="470.0" prefWidth="569.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SearchTaskForm">
     <children>
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#57595b" height="410.0" layoutX="13.0" layoutY="89.0" stroke="BLACK" strokeType="INSIDE" width="545.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#57595b" height="367.0" layoutX="13.0" layoutY="89.0" stroke="BLACK" strokeType="INSIDE" width="545.0" />
         <Text layoutX="164.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="My Day" wrappingWidth="173.7952880859375">
             <font>
                 <Font name="Bodoni MT Bold" size="41.0" />
@@ -25,10 +22,10 @@
                 <Image url="@img/icons8-day-50.png" />
             </image>
         </ImageView>
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ced0d1" height="83.0" layoutX="30.0" layoutY="105.0" stroke="BLACK" strokeType="INSIDE" width="514.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ced0d1" height="181.0" layoutX="30.0" layoutY="105.0" stroke="BLACK" strokeType="INSIDE" width="514.0" />
         <ImageView fitHeight="151.0" fitWidth="284.0" layoutX="36.0" layoutY="292.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@img/mahiii.jpg" />
+                <Image url="@img/MahiTalks.jpg" />
             </image>
         </ImageView>
         <Text layoutX="31.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Form" wrappingWidth="100.0">
@@ -36,67 +33,36 @@
                 <Font name="Harlow Solid Italic" size="14.0" />
             </font>
         </Text>
-        <TextField fx:id="txtSearchTitleDescription" layoutX="36.0" layoutY="116.0" prefHeight="26.0" prefWidth="352.0" promptText="Type only titles and descriptions......" />
-      <JFXButton alignment="BASELINE_LEFT" layoutX="419.0" layoutY="125.0" onAction="#btnSearchOnAction" prefHeight="34.0" prefWidth="118.0" style="-fx-background-color: #1e6e84;" text="Search" textFill="WHITE">
+      <JFXButton alignment="BASELINE_LEFT" layoutX="393.0" layoutY="304.0" onAction="#btnSearchActiveOnAction" prefHeight="34.0" prefWidth="150.0" style="-fx-background-color: #21108e;" text="Active Tasks" textFill="WHITE">
          <font>
             <Font name="Bodoni MT Bold" size="15.0" />
          </font>
       </JFXButton>
-      <DatePicker fx:id="txtDateforSearch" layoutX="137.0" layoutY="146.0" promptText="Type only date..." />
-      <TableView fx:id="tableView" layoutX="25.0" layoutY="201.0" prefHeight="83.0" prefWidth="523.0">
-        <columns>
-          <TableColumn fx:id="txtId" prefWidth="47.20001411437988" text="Id" />
-          <TableColumn fx:id="txtTitle" prefWidth="96.00003051757812" text="Title" />
-            <TableColumn fx:id="txtDescription" prefWidth="112.79994201660156" text="Description" />
-            <TableColumn fx:id="txtDueDate" prefWidth="83.20001220703125" text="Due_Date" />
-            <TableColumn fx:id="txtCreatedDate" prefWidth="91.99993896484375" text="Created Date" />
-            <TableColumn fx:id="txtCompletedAt" prefWidth="89.60003662109375" text="Completed_At" />
-        </columns>
-      </TableView>
-      <JFXButton alignment="BASELINE_LEFT" layoutX="411.0" layoutY="332.0" onAction="#btnDeleteSearchOnAction" prefHeight="49.0" prefWidth="134.0" style="-fx-background-color: #96b443;" text="Delete">
-         <font>
-            <Font name="Bodoni MT Bold" size="21.0" />
-         </font>
-      </JFXButton>
-      <JFXButton alignment="BASELINE_LEFT" layoutX="30.0" layoutY="447.0" onAction="#btnBackToHomeOnAction" prefHeight="46.0" prefWidth="174.0" style="-fx-background-color: #0a4848;" text="Back To Home" textFill="WHITE">
+      <JFXButton alignment="BASELINE_LEFT" layoutX="372.0" layoutY="396.0" onAction="#btnBackToHomeOnAction" prefHeight="46.0" prefWidth="174.0" style="-fx-background-color: #1e6e84;" text="Back To Home" textFill="WHITE">
          <font>
             <Font name="Bodoni MT" size="17.0" />
          </font>
       </JFXButton>
-      <ImageView fitHeight="48.0" fitWidth="55.0" layoutX="158.0" layoutY="446.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="48.0" fitWidth="55.0" layoutX="500.0" layoutY="395.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@img/icons8-home-50.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="34.0" fitWidth="38.0" layoutX="489.0" layoutY="123.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="34.0" fitWidth="38.0" layoutX="495.0" layoutY="302.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@img/icons8-search-50.png" />
+            <Image url="@img/icons8-active-50.png" />
          </image>
       </ImageView>
-      <JFXButton alignment="BOTTOM_LEFT" layoutX="415.0" layoutY="393.0" onAction="#btnAddOnAction" prefHeight="46.0" prefWidth="126.0" style="-fx-background-color: #63522a;" text="Add" textFill="WHITE">
+      <JFXButton alignment="BASELINE_LEFT" layoutX="378.0" layoutY="350.0" onAction="#btnSearchCompletedOnAction" prefHeight="34.0" prefWidth="162.0" style="-fx-background-color: #6b0e4c;" text="Completed Tasks" textFill="WHITE">
          <font>
-            <Font name="Bodoni MT" size="23.0" />
+            <Font name="Bodoni MT Bold" size="15.0" />
          </font>
       </JFXButton>
-      <ImageView fitHeight="48.0" fitWidth="53.0" layoutX="492.0" layoutY="392.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@img/icons8-add-48.png" />
-         </image>
-      </ImageView>
-      <JFXButton alignment="BASELINE_LEFT" layoutX="400.0" layoutY="446.0" onAction="#btnCompleteOnAction" prefHeight="46.0" prefWidth="143.0" style="-fx-background-color: #1c286b;" text="Completed" textAlignment="JUSTIFY" textFill="WHITE">
-         <font>
-            <Font name="Bodoni MT Bold" size="18.0" />
-         </font>
-      </JFXButton>
-      <ImageView fitHeight="48.0" fitWidth="53.0" layoutX="489.0" layoutY="445.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="34.0" fitWidth="38.0" layoutX="503.0" layoutY="350.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@img/icons8-complete-50.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="48.0" fitWidth="53.0" layoutX="492.0" layoutY="333.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@img/icons8-delete-50.png" />
-         </image>
-      </ImageView>
+      <JFXTextArea layoutX="35.0" layoutY="108.0" prefHeight="175.0" prefWidth="505.0" text="Mahinda Rajapaksha, &#10;2010.&#10;prime minister of Sri Lanka&#10;    &#10;Also known as: Mahinda Rajapakse&#10;Written and fact-checked by &#10;Last Updated: Aug 17, 2024 • Article History&#10;Quick Facts&#10;Rajapaksa also spelled: Rajapakse&#10;Born: November 18, 1945, Weeraketiya, Sri Lanka (age 78)&#10;Title / Office: prime minister (2019-2022), Sri Lanka president (2005-2015), Sri Lanka&#10;Political Affiliation: United People’s Freedom Alliance" />
     </children>
 </AnchorPane>

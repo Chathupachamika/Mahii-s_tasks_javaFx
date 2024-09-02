@@ -6,9 +6,8 @@ import model.MahiRajapakshe;
 public interface MahiiService {
 
 
-
-    ObservableList<MahiRajapakshe> getAll();
-
-
     boolean deleteSearch(int id);
+
+
+    ObservableList<MahiRajapakshe> getAll(String searchQuery, java.sql.Date searchDate);
 }

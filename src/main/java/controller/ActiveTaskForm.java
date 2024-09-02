@@ -5,9 +5,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
-import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -15,13 +13,12 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import model.MahiRajapakshe;
 
-import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class CompleteTaskForm {
+public class ActiveTaskForm {
 
     @FXML
     private TableView<MahiRajapakshe> tableView;
@@ -41,8 +38,12 @@ public class CompleteTaskForm {
     @FXML
     private TableColumn<MahiRajapakshe, String> txtCreatedDate;
 
+
     @FXML
-    private TableColumn<MahiRajapakshe, String> txtCompletedAt;
+    void btnBackToHomeOnAction(ActionEvent event){
+        Stage stage2 = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage2.close();
+    }
 
     @FXML
     void btnReloadOnAction(ActionEvent event) {
@@ -50,9 +51,9 @@ public class CompleteTaskForm {
     }
 
     private void loadCompletedTasks() {
-        ObservableList<MahiRajapakshe> completedTasks = FXCollections.observableArrayList();
+        ObservableList<MahiRajapakshe> activeTasks = FXCollections.observableArrayList();
 
-        String sql = "SELECT id, title, description, due_date, created_at, completed_at FROM completed_tasks";
+        String sql = "SELECT id, title, description, due_date, created_at FROM active_tasks";
 
         try (Connection connection = DBConnection.getInstance().getConnection();
              PreparedStatement statement = connection.prepareStatement(sql);
@@ -64,16 +65,14 @@ public class CompleteTaskForm {
                         resultSet.getString("title"),
                         resultSet.getString("description"),
                         resultSet.getDate("due_date").toLocalDate(),
-                        true,
-                        resultSet.getTimestamp("created_at").toLocalDateTime(),
-                        resultSet.getTimestamp("completed_at") != null ? resultSet.getTimestamp("completed_at").toLocalDateTime() : null
+                        resultSet.getTimestamp("created_at").toLocalDateTime()
                 );
-                completedTasks.add(task);
+                activeTasks.add(task);
             }
 
-            tableView.setItems(completedTasks);
+            tableView.setItems(activeTasks);
             System.out.println("Tasks loaded successfully.");
-            completedTasks.forEach(task -> System.out.println(task));
+            activeTasks.forEach(task -> System.out.println(task));
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -97,11 +96,6 @@ public class CompleteTaskForm {
         txtDescription.setCellValueFactory(new PropertyValueFactory<>("description"));
         txtDueDate.setCellValueFactory(new PropertyValueFactory<>("dueDate"));
         txtCreatedDate.setCellValueFactory(new PropertyValueFactory<>("createdAt"));
-        txtCompletedAt.setCellValueFactory(new PropertyValueFactory<>("completedAt"));
     }
-    @FXML
-    void btnBackToHomeOnAction(ActionEvent event) {
-        Stage stage2 = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage2.close();
-    }
+
 }

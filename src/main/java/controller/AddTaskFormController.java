@@ -75,41 +75,9 @@ public class AddTaskFormController {
 
     @FXML
     void btnBackToHomeOnAction(ActionEvent event) {
-        Stage stage1 = new Stage();
-        try {
-            stage1.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/profile_form.fxml"))));
-            stage1.show();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        Stage stage2 = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage2.close();
-    }
-
-    @FXML
-    void btnCompleteOnAction(ActionEvent event) {
-        Stage stage = new Stage();
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/complete_task_form.fxml"))));
-            stage.show();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        Stage stage2 = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage2.close();
-    }
-
-    @FXML
-    void btnSearchOnAction(ActionEvent event) {
-        Stage stage = new Stage();
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/search_task_form.fxml"))));
-            stage.show();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
         Stage stage2 = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage2.close();
     }
 
 }
+

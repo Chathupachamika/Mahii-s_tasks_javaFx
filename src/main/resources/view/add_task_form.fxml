@@ -11,9 +11,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="473.0" prefWidth="408.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddTaskFormController">
+<AnchorPane prefHeight="396.0" prefWidth="408.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddTaskFormController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#57595b" height="357.0" layoutX="24.0" layoutY="89.0" stroke="BLACK" strokeType="INSIDE" width="361.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#57595b" height="283.0" layoutX="24.0" layoutY="89.0" stroke="BLACK" strokeType="INSIDE" width="361.0" />
       <Text layoutX="115.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="My Day" wrappingWidth="173.7952880859375">
          <font>
             <Font name="Bodoni MT Bold" size="41.0" />
@@ -26,7 +26,7 @@
       </ImageView>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ced0d1" height="69.0" layoutX="31.0" layoutY="95.0" stroke="BLACK" strokeType="INSIDE" width="348.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ced0d1" height="48.0" layoutX="31.0" layoutY="171.0" stroke="BLACK" strokeType="INSIDE" width="348.0" />
-      <ImageView fitHeight="137.0" fitWidth="200.0" layoutX="36.0" layoutY="239.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="137.0" fitWidth="174.0" layoutX="36.0" layoutY="239.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@img/mahiii.jpg" />
          </image>
@@ -44,37 +44,17 @@
          </font></JFXButton>
       <JFXTextField fx:id="txtAddToDoTitle" layoutX="51.0" layoutY="95.0" prefHeight="26.0" prefWidth="300.0" promptText="Title      -&gt;" />
       <JFXTextField fx:id="txtAddToDoDescription" layoutX="48.0" layoutY="130.0" prefHeight="26.0" prefWidth="307.0" promptText="Description      -&gt;" />
-      <JFXButton alignment="BOTTOM_LEFT" layoutX="245.0" layoutY="316.0" onAction="#btnSearchOnAction" prefHeight="38.0" prefWidth="126.0" style="-fx-background-color: #562828;" text="Search" textFill="WHITE">
-         <font>
-            <Font name="Bodoni MT Bold" size="23.0" />
-         </font>
-      </JFXButton>
-      <ImageView fitHeight="48.0" fitWidth="53.0" layoutX="326.0" layoutY="315.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@img/icons8-search-50.png" />
-         </image>
-      </ImageView>
       <ImageView fitHeight="48.0" fitWidth="53.0" layoutX="326.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@img/icons8-add-48.png" />
          </image>
       </ImageView>
-      <JFXButton alignment="BASELINE_LEFT" layoutX="237.0" layoutY="384.0" onAction="#btnCompleteOnAction" prefHeight="46.0" prefWidth="143.0" style="-fx-background-color: #1c286b;" text="Completed" textAlignment="JUSTIFY" textFill="WHITE">
-         <font>
-            <Font name="Bodoni MT Bold" size="18.0" />
-         </font>
-      </JFXButton>
-      <ImageView fitHeight="48.0" fitWidth="53.0" layoutX="326.0" layoutY="383.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@img/icons8-complete-50.png" />
-         </image>
-      </ImageView>
-      <JFXButton alignment="BASELINE_LEFT" layoutX="34.0" layoutY="384.0" onAction="#btnBackToHomeOnAction" prefHeight="46.0" prefWidth="174.0" style="-fx-background-color: #63522a;" text="Back To Home" textFill="WHITE">
+      <JFXButton alignment="BASELINE_LEFT" layoutX="214.0" layoutY="308.0" onAction="#btnBackToHomeOnAction" prefHeight="46.0" prefWidth="161.0" style="-fx-background-color: #632e2e;" text="Back To Home" textFill="WHITE">
          <font>
             <Font name="Bodoni MT" size="17.0" />
          </font>
       </JFXButton>
-      <ImageView fitHeight="48.0" fitWidth="55.0" layoutX="162.0" layoutY="383.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="46.0" fitWidth="41.0" layoutX="336.0" layoutY="309.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@img/icons8-home-50.png" />
          </image>
