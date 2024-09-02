@@ -56,7 +56,8 @@ public class SearchCompletedTasks {
 
     @FXML
     void btnBackToHomeOnAction(ActionEvent event) {
-
+        Stage stage2 = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage2.close();
     }
 
     @FXML
